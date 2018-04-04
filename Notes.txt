@@ -1,0 +1,6 @@
+# Following tutorial for Flask
+
+https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+
+# in powershell set the flask app as 
+$env:FLASK_APP="microblog.py"
