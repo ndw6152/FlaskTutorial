@@ -2,5 +2,14 @@
 
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 
-# in powershell set the flask app as 
-$env:FLASK_APP="microblog.py"
+# using pycharm and the default terminal
+# added the virtual env as one of the project interpreter in the IDE
+
+# in powershell/cmd set the flask app as
+workon inspiQuotes
+$env:FLASK_APP="main_entry.py"
+set FLASK_APP=main_entry.py
+
+# to start the webserver 
+flask run
+# go to  http://localhost:5000/

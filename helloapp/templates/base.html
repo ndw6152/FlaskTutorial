@@ -7,8 +7,24 @@
       {% endif %}
     </head>
     <body>
-        <div>Microblog: <a href="/index">Home</a></div>
+        <div>Microblog:
+            <!-- navigation bar quick links -->
+            <a href="{{ url_for('home_index') }}">Home</a>
+            <a href="{{ url_for('login') }}">Login</a>
+        </div>
         <hr>
+        <!-- code to handle flashed message -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        <!-- main body produced by children-->
         {% block content %}{% endblock %}
     </body>
 </html>

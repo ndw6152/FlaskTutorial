@@ -1,7 +1,9 @@
 from flask import Flask
-from configuration import DebugConfig
+
+from helloapp.config import DebugConfig
 
 app = Flask(__name__)
 app.config.from_object(DebugConfig)
+
 
 from helloapp import routes
