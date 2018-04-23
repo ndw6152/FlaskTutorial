@@ -25,3 +25,6 @@ flask db init
 flask db migrate # autogenerate migration script
 flask db upgrade # make changes to the db
 # use db browser to see sql
+
+
+flask shell # starts a python interpreter with the application instance, can be configured with a list of pre-imports

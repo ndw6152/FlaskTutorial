@@ -1,5 +1,8 @@
-from helloapp import app
+from helloapp import app, db
 # from helloapp package import application named app
+from helloapp.models import User, Post
 
-# following this tutorial 
-# https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+
+@app.shell_context_processor
+def make_shell_context():
+    return {'db': db, 'User': User, 'Post': Post}
