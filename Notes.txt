@@ -5,6 +5,10 @@ https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 # using pycharm and the default terminal
 # added the virtual env as one of the project interpreter in the IDE
 
+pip freeze > requirement.txt
+# install all packages
+pip install -r requirements.txt
+
 # in powershell/cmd set the flask app as
 workon inspiQuotes
 $env:FLASK_APP="main_entry.py"
@@ -13,3 +17,11 @@ set FLASK_APP=main_entry.py
 # to start the webserver 
 flask run
 # go to  http://localhost:5000/
+
+# https://www.sitepoint.com/sql-vs-nosql-differences/
+
+
+flask db init
+flask db migrate # autogenerate migration script
+flask db upgrade # make changes to the db
+# use db browser to see sql
