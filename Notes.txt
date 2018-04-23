@@ -26,5 +26,15 @@ flask db migrate # autogenerate migration script
 flask db upgrade # make changes to the db
 # use db browser to see sql
 
+# starts a python interpreter with the application instance, can be configured with a list of pre-imports
+flask shell
 
-flask shell # starts a python interpreter with the application instance, can be configured with a list of pre-imports
+    # quick add user to db; flask-sqlalchemy
+    u = User(username="test", email="test@example.com")
+    u.set_password("taco")
+    db.session.add(u)
+    db.session.commit()
+
+    # query
+    user = User.query.filter_by(username='test').first()
+    user.email

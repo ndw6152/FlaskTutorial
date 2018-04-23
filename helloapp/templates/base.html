@@ -10,7 +10,11 @@
         <div>Microblog:
             <!-- navigation bar quick links -->
             <a href="{{ url_for('home_index') }}">Home</a>
-            <a href="{{ url_for('login') }}">Login</a>
+            {% if current_user.is_anonymous %}          <!--current_user is from flask-login-->
+                <a href="{{ url_for('login') }}">Login</a>
+            {% else %}
+                <a href="{{ url_for('logout') }}">Logout</a>
+            {% endif %}
         </div>
         <hr>
         <!-- code to handle flashed message -->
