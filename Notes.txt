@@ -4,6 +4,7 @@ https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 
 # using pycharm and the default terminal
 # added the virtual env as one of the project interpreter in the IDE
+# go to settings and add exisiting or create a new one
 
 pip freeze > requirement.txt
 # install all packages
@@ -13,6 +14,8 @@ pip install -r requirements.txt
 workon inspiQuotes
 $env:FLASK_APP="main_entry.py"
 set FLASK_APP=main_entry.py
+
+set FLASK_DEBUG=1
 
 # to start the webserver 
 flask run
